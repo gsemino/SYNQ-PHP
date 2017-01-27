@@ -6,7 +6,7 @@ use SYNQ\lib\Video;
 use GuzzleHttp\Client;
 
 /**
-* The synq api SDK
+* The synq api SDK'
 */
 class API
 {
@@ -16,6 +16,6 @@ class API
     public function __construct(string $key, string $host)
     {
         $this->host = $host;
-        $this->video = new Video(new Client(['base_uri' => $host]));
+        $this->video = new Video($key, new Client(['base_uri' => $host]));
     }
 }

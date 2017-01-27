@@ -21,6 +21,6 @@ abstract class Endpoint
     public function request(string $uri, array $formData = [])
     {
         $formData['api_key'] = $this->key;
-        return $client->request('POST', $uri, array('form_params' => $formData ));
+        return $this->client->request('POST', $uri, array('form_params' => $formData ));
     }
 }

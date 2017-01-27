@@ -8,12 +8,12 @@ class Video extends Endpoint
 {
     public function details(string $video)
     {
-        return $this->request('video/details', ['video_id': $video]);
+        return $this->request('video/details', ['video_id' => $video]);
     }
 
-    public function create(array $userdata)
+    public function create(array $userdata = [])
     {
-        return $this->request('video/create', $userdata);
+        return $this->request('video/create', array('userdata' => json_encode($userdata)));
     }
 
     public function query(string $filter)
@@ -36,7 +36,7 @@ class Video extends Endpoint
         return $this->request('video/upload', ['video_id' => $video]);
     }
 
-    public function uploader(string $video, string $timeout)
+    public function uploader(string $video, string $timeout = '2 hours')
     {
         return $this->request('video/uploader', ['video_id' => $video, 'timeout' => $timeout]);
     }
