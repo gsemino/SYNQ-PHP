@@ -15,9 +15,12 @@ Use composer to install:
 https://getcomposer.org/
 
 ```php
-"require": {
-        "synq/php-client": "1.0.*"
-}
+{
+    "require": {
+            "synq/php-client": "1.0.*"
+
+    }
+}    
 ```
 
 ## Usage
