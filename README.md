@@ -6,6 +6,10 @@ The library provides functions mirroring the endpoints in the api, and some simp
 
 It makes use of [GUZZLE](http://docs.guzzlephp.org/) to make requests.
 
+## Requirements
+
+The SYNQ PHP SDK requires PHP version 7 or higher and Composer for installing. We do plan to support PHP version 5.6 in the very near future. 
+
 ## Get started
 
 __Composer:__
@@ -26,6 +30,9 @@ https://getcomposer.org/
 ## Usage
 
 ```php
+// If your environment does not handle autoloading include the line below
+require __DIR__ . '/vendor/autoload.php';
+
 use SYNQ\lib\API;
 ```
 
